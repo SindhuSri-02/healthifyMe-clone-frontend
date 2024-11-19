@@ -11,7 +11,7 @@ function App() {
   async function registerUser(event) {
     event.preventDefault();
 
-    const response = await fetch('http://localhost:1337/api/authenticate/register',{
+    const response = await fetch('process.env.BACKEND_URL/api/authenticate/register',{
       method: 'POST',
       headers: {
         'Content-Type' : 'application/json'

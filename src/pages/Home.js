@@ -62,7 +62,7 @@ function App() {
           try {
 
               const token = localStorage.getItem('token')
-              const response = await fetch(`http://localhost:1337/api/journal/date/${date}`, {
+              const response = await fetch(`process.env.BACKEND_URL/api/journal/date/${date}`, {
                   method: 'GET',
                   headers: {
                     'authorization': token

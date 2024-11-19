@@ -17,7 +17,7 @@ const App = ()=>{
         <BrowserRouter>
         {/* <RefreshHandler setIsAuthenticated={setIsAuthenticated} /> */}
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path={["/", "/login"]} element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<Home />} />
         <Route path="/user" element={<User />} />

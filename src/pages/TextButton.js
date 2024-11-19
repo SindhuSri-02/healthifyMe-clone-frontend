@@ -18,7 +18,7 @@ const TextButton = ({ type, onCaloriesChange, date, initialMeals }) => {
     const updateCalories = useCallback(async () => {
         try {
             const token = localStorage.getItem('token')
-            const response = await fetch(`http://localhost:1337/api/journal/date/${date}/type/${type}/calories`, {
+            const response = await fetch(`process.env.BACKEND_URL/api/journal/date/${date}/type/${type}/calories`, {
                 method: 'GET',
                 headers: {
                     'authorization': token
@@ -58,7 +58,7 @@ const TextButton = ({ type, onCaloriesChange, date, initialMeals }) => {
     const fetchOwnMeals = useCallback(async() => {
         try {
             const token = localStorage.getItem('token')
-            const response = await fetch(`http://localhost:1337/api/meals/`, {
+            const response = await fetch(`process.env.BACKEND_URL/api/meals/`, {
                 method: 'GET',
                 headers: {
                     'authorization': token
@@ -75,7 +75,7 @@ const TextButton = ({ type, onCaloriesChange, date, initialMeals }) => {
 
     async function fetchMeal() {
         try {
-            const response = await fetch(`http://localhost:1337/api/meals/${searchQuery}`, {
+            const response = await fetch(`process.env.BACKEND_URL/api/meals/${searchQuery}`, {
                 method: 'GET'
             });
             const jsonBody = await response.json();
@@ -111,7 +111,7 @@ const TextButton = ({ type, onCaloriesChange, date, initialMeals }) => {
 
             const token = localStorage.getItem('token')
 
-            const response = await fetch(`http://localhost:1337/api/journal/date/${date}/type/${type}`, {
+            const response = await fetch(`process.env.BACKEND_URL/api/journal/date/${date}/type/${type}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -149,7 +149,7 @@ const TextButton = ({ type, onCaloriesChange, date, initialMeals }) => {
     const removeMeal = async (index, meal) => {
         try {
             const token = localStorage.getItem('token')
-            const response = await fetch(`http://localhost:1337/api/journal/date/${date}/type/${type}/meal/${meal._id}`, {
+            const response = await fetch(`process.env.BACKEND_URL/api/journal/date/${date}/type/${type}/meal/${meal._id}`, {
                     method: 'DELETE',
                     headers: {
                         'authorization': token
@@ -172,7 +172,7 @@ const TextButton = ({ type, onCaloriesChange, date, initialMeals }) => {
     const increaseQuantity = async (meal,index) => {
         try {
             const token = localStorage.getItem('token')
-            const response = await fetch(`http://localhost:1337/api/journal/date/${date}/type/${type}/meal/${meal._id}/inc`, {
+            const response = await fetch(`process.env.BACKEND_URL/api/journal/date/${date}/type/${type}/meal/${meal._id}/inc`, {
                     method: 'POST',
                     headers: {
                         'authorization': token
@@ -199,7 +199,7 @@ const TextButton = ({ type, onCaloriesChange, date, initialMeals }) => {
     const decreaseQuantity = async (meal, index) => {
         try {
             const token = localStorage.getItem('token')
-            const response = await fetch(`http://localhost:1337/api/journal/date/${date}/type/${type}/meal/${meal._id}/dec`, {
+            const response = await fetch(`process.env.BACKEND_URL/api/journal/date/${date}/type/${type}/meal/${meal._id}/dec`, {
                     method: 'POST',
                     headers: {
                         'authorization': token
@@ -232,7 +232,7 @@ const TextButton = ({ type, onCaloriesChange, date, initialMeals }) => {
     const createMeal = async () => {
         try {
             const token = localStorage.getItem('token')
-            const response = await fetch(`http://localhost:1337/api/meals`, {
+            const response = await fetch(`process.env.BACKEND_URL/api/meals`, {
                 method: 'POST',
                 headers: {
                     'authorization': token,

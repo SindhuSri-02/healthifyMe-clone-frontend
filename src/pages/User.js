@@ -13,7 +13,7 @@ function App() {
         async function getUser() {
             try {
                 const token = localStorage.getItem('token');
-                const response = await fetch(`http://localhost:1337/api/users/userProfile`, {
+                const response = await fetch(`process.env.BACKEND_URL/api/users/userProfile`, {
                     method: 'GET',
                     headers: {
                         'authorization': token,
@@ -53,7 +53,7 @@ function App() {
     const handleRemoveMeal = async (mealId) => {
         try{
         const token = localStorage.getItem('token');
-                const response = await fetch(`http://localhost:1337/api/users/meal/${mealId}`, {
+                const response = await fetch(`process.env.BACKEND_URL/api/users/meal/${mealId}`, {
                     method: 'Delete',
                     headers: {
                         'authorization': token,

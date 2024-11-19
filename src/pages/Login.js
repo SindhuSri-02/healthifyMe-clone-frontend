@@ -11,7 +11,7 @@ function App() {
   async function loginUser(event) {
     event.preventDefault();
 
-    const response = await fetch('http://localhost:1337/api/authenticate/login',{
+    const response = await fetch('process.env.BACKEND_URL/api/authenticate/login',{
       method: 'POST',
       headers: {
         'Content-Type' : 'application/json'
