@@ -1,0 +1,259 @@
+/* TextButton.css */
+
+/* Container Styling */
+.container {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+/* Header Container for Type and Calories */
+.typeCaloriesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures horizontal alignment */
+    padding: 12px 0; /* Vertical spacing */
+    gap: 20px; /* Space between type and calories */
+  }
+  
+  /* Type Styling */
+  .typeText {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 0; /* Removes default margin */
+    letter-spacing: 1px; /* Adds spacing between letters for all-caps */
+    text-transform: uppercase; /* Makes the text all caps */
+    line-height: 1; /* Ensures no additional height padding */
+  }
+  
+  /* Calories Styling */
+  .caloriesText {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FF6347; /* Highlight color for calories */
+    margin: 0; /* Removes extra margin */
+    display: flex; /* Align number and units horizontally */
+    align-items: center; /* Ensures small text aligns with the main number */
+  }
+  
+  .caloriesText small {
+    font-size: 14px; /* Slightly smaller for units */
+    font-weight: 400;
+    color: #666; /* Subtle color for units */
+    margin-left: 6px; /* Space between number and unit */
+  }   
+
+  /* Button Styling */
+  .button {
+    padding: 12px 24px;
+    margin: 12px 0;
+    background-color: #3c4fe6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #2b3bb2;
+    transform: translateY(-2px);
+  }
+  
+  .searchContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .searchInput {
+    padding: 12px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+  }
+  
+  .searchInput:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Search Button */
+  .searchContainer button {
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+  }
+  
+  .searchContainer button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+  }
+  
+  /* List Styling */
+  ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style-type: none;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  li {
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    gap: 2px;
+  }
+  
+  li:hover {
+    background-color: #e9e9e9;
+    transform: translateY(-2px);
+  }
+  
+  li:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Quantity Controls */
+  .quantityControls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .quantityButton {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+  }
+  
+  .quantityButton:hover {
+    background-color: #ddd;
+    transform: scale(1.1);
+  }
+  
+  .quantity {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .removeButton {
+    padding: 8px 14px;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+  }
+  
+  .removeButton:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+  }
+  
+  /* Form Styling */
+  input[type="text"] {
+    padding: 12px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  span {
+    font-size: 16px;
+    color: #888;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Disabled Button */
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .mealCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    margin-bottom: 15px;
+    background-color: #fdfdfd;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+  
+  .mealCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Meal Details Section */
+  .mealDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .mealName {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .mealInfo {
+    font-size: 14px;
+    color: #666;
+  }
+  

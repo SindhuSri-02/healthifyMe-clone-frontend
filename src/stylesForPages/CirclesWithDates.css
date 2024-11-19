@@ -1,0 +1,78 @@
+/* Container styles */
+.circles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  overflow-x: hidden;
+  flex-wrap: wrap; /* Wrap dates by default */
+}
+/* Circle card styles */
+.circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px;
+  min-width: 90px;
+  height: 90px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #e6e9ff, #ffffff);
+  box-shadow: 4px 4px 8px #b0b4db, -4px -4px 8px #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.circle:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 6px 12px #b0b4db, -6px -6px 12px #ffffff;
+}
+
+.circle-selected {
+  background: linear-gradient(145deg, #5c6ff0, #7a8cf5); /* Subtle highlight */
+  color: #ffffff;
+  box-shadow: 4px 4px 10px #3d4dca, -4px -4px 10px #96a3f8; /* Softer shadows */
+  transform: scale(1.07); /* Slightly smaller scale */
+}
+
+/* Number inside the circle */
+.circle-number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3c4fe6;
+  margin-bottom: 5px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.circle-selected .circle-number {
+  color: #ffffff;
+}
+
+/* Date inside the circle */
+.circle-date {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  font-weight: 500;
+}
+
+.circle-selected .circle-date {
+  color: #ffffff;
+}
+
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 1024px) {
+  .circles-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap; /* Keep items in a single line */
+    justify-content: flex-start; /* Align to the left */
+    scroll-snap-type: x mandatory;
+  }
+
+  .circle {
+    scroll-snap-align: center;
+  }
+}

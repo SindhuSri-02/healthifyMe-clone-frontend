@@ -1,0 +1,78 @@
+.userProfileContainer {
+    display: flex;
+    height: 100vh; /* Full-screen height */
+    width: 100vw; /* Full-screen width */
+    background-color: #f8f9fa; /* Light background */
+    font-family: 'Arial', sans-serif;
+    position: relative; /* For cross button positioning */
+}
+
+.crossButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 20px;
+    color: #dc3545; /* Red color */
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 100; /* Ensure it appears above other elements */
+}
+
+.crossButton:hover {
+    color: #a71d2a; /* Darker red on hover */
+}
+
+.leftPanel {
+    width: 30%; /* Occupies 30% of the width */
+    background-color: #ffffff; /* White background for the left panel */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+    border-right: 1px solid #dee2e6; /* Divider line */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headerUser {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.graphContainer {
+    flex: 1; /* Ensures the graph container expands */
+    margin-top: 1rem;
+}
+
+.rightPanel {
+    width: 70%; /* Occupies 70% of the width */
+    overflow-y: auto; /* Enables scrolling for meals if they overflow */
+    padding: 2rem;
+}
+
+.mealsList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mealCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* White background */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #dee2e6; /* Light border */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logoutButton {
+    background-color: #007bff; /* Blue background */
+    color: #ffffff;
+    padding: 0.5rem 2rem;
+    font-size: 16px;
+    margin-top: auto; /* Pushes it to the bottom */
+    align-self: center; /* Centers horizontally */
+}

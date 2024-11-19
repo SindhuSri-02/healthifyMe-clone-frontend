@@ -1,0 +1,46 @@
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; /* Adds spacing below the header */
+    margin-top: 10px;
+}
+
+/* Home Title styling */
+.homeTitle {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* User Circle styling */
+.userCircle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF6347; /* Highlight color */
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50%;
+    text-transform: uppercase; /* Ensure the letter is uppercase */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.totalCalories {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF6347; /* Highlight color */
+    text-align: center; /* Center text within the element */
+    margin: 20px auto; /* Automatically center element horizontally */
+    padding: 10px;
+    background-color: #FFE4E1; /* Light background */
+    border: 2px solid #FF6347; /* Border in highlight color */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    display: block; /* Ensures it's treated as a block-level element */
+    width: fit-content; /* Makes width wrap tightly around the content */
+}
