@@ -3,9 +3,6 @@ This app is built with ReactJS to help users track their daily meals and monitor
 #### hosted at - [Health Tracker](https://healthtracker-j0jj.onrender.com)
 
 ## Features
-#### User Authentication:
-
-User Authentication:
 
 1. Users can register and log in securely.
 ..* Authentication is implemented using JWT (JSON Web Tokens).
