@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+This app is built with ReactJS to help users track their daily meals and monitor calorie intake. This application includes user authentication, weekly calorie consumption graphs, and a meal management system.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### hosted at - [Health Tracker](https://healthtracker-j0jj.onrender.com)
 
-## Available Scripts
+## Features
+#### User Authentication:
 
-In the project directory, you can run:
+User Authentication:
 
-### `npm start`
+1. Users can register and log in securely.
+..* Authentication is implemented using JWT (JSON Web Tokens).
+2. Meal Tracking:
+..* Users can add, view, and delete their daily meals.
+..* Each meal contains details like name, calories, and serving size.
+3. Weekly Calorie Graph:
+..* Displays a bar chart of daily calorie consumption over the last 7 days.
+4. Responsive UI:
+..* Optimized for both desktop and mobile screens.
+..* Clear separation of user profile, meal details per date per type, and graph visualization.
+5. Private Routes:
+..* Sensitive routes like /home and /user are protected and accessible only to authenticated users.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation and Setup
+#### Prerequisites
+##### Ensure you have the following installed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Node.js (v16 or higher)
+Git
 
-### `npm test`
+Steps:
+#### Clone the Repository:
+`git clone https://github.com/SindhuSri-02/healthifyMe-clone-frontend.git`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Install Dependencies:
+`npm install`
 
-### `npm run build`
+###### Start the Application:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Access the Application: Open your browser and navigate to http://localhost:3000. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots
+#### Login Page
+![login-page](https://github.com/user-attachments/assets/53f60433-e642-4876-9872-e9ef50ba198c)
 
-### `npm run eject`
+#### Home Page
+![home page](https://github.com/user-attachments/assets/df1053a3-837e-4b9c-a366-8e55bc20d589)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### User Page
+![user page](https://github.com/user-attachments/assets/7d982d2a-7b41-435b-bb05-ab7eaea68c4c)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
+```
+Framework: react.js
+Authentication: JWT
+```
+```
+Directory structure:
+/
+├── src/
+     |---- pages/           # React Pages (User, Home, Dates, Graph)
+     |---- stylesForPages   # CSS styles for react pages
+     |---- App.js           # Start of the react app
+├── public/            # static files
+```
+##### API Endpoints
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Authentication:
+| Endpoint   | Description                    |
+|:----------:| ------------------------------:|
+| /register  | Register a new user            |
+| /login	   | Login and get a token          |
+| /home      | Accessed by logged in user     |
+| /user      | Shows logged in user's details |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technologies Used
+Node.js
+React.js
+JWT Authentication
 
-## Learn More
+## Future Enhancements
+Add the ability to edit meals.
+Add a feature to track macronutrients (protein, carbs, fat).
+Add exercise done, so that calories spent is noted
+Recommend amount of the calories to be taken based on weight and goal of user, recommened diet too
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributing
+Contributions are welcome! Please fork the repository, create a feature branch, and submit a pull request.
